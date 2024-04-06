@@ -2,18 +2,14 @@ import React from "./react";
 import ReactDOM from "./react-dom";
 
 function Card(props) {
-  console.log(props);
+  const fruits = ["apple", "banana", "mango"];
+
   return (
-    <div>
-      <h2
-        style={{
-          color: "blue",
-        }}
-      >
-        Hello World in H2 by {props.name}
-      </h2>
-      {props.children}
-    </div>
+    <ul>
+      {fruits.map((fruit) => (
+        <li>{fruit}</li>
+      ))}
+    </ul>
   );
 }
 
